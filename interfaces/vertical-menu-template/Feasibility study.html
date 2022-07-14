@@ -1327,19 +1327,19 @@
                   <input type="text" name="name" class="form-control" placeholder="اسم المنافس"/> 
                 </td> 
                 <td class="col-sm-2"> 
-                  <input type="number" name="product" class="form-control"   min="0" max="1000" placeholder="#100#"/>
+                  <input id="product" type="number" name="product" class="form-control"   min="0" max="1000" placeholder="#100#"/>
                 </td> 
                 <td class="col-sm-2"> 
-                  <input type="number" name="quality" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
+                  <input ID="priceUnit" type="number" name="priceUnit" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
                 </td>
                 <td class="col-sm-2"> 
-                  <input type="number" name="priceUnit" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
+                  <input disabled type="number" name="quality" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
                 </td> 
                 <td class="col-sm-2"> 
-                  <input type="number" name="totalMoth" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
+                  <input disabled type="number" name="totalMoth" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
                 </td> 
                 <td class="col-sm-1">
-                  <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Revenuerow()" value="إضافة" /> 
+                  <input  type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Revenuerow()" value="إضافة" /> 
                 </td> 
                 
                 </tr> 
@@ -1351,7 +1351,7 @@
                   <th scope="col"> </th>
                   <th scope="col"> </th> 
                   <th scope="col"> </th> 
-                  <th scope="col">   </th>
+                  <th scope="col"> <input id="totalall" disabled type="number" name="totalall" class="form-control"/> </th>
                   <th scope="col">   </th>
 
                 </tr>

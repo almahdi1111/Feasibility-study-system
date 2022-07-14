@@ -288,13 +288,48 @@ row.id=id;
 }
  
 //  جدول الايرادات المتوقعة 
- 
+ function calculateTotals()
+ {
+  var price=document.getElementById("priceUnit").value;
+  var product=document.getElementById("product").value;
+
+ }
 function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function Revenuerow()
+	}
+function Revenuerow()
 	{ 
 	var table = document.getElementById("Revenuerow");
+ 
+  var table1 = document.getElementById("Revenuerow").getElementsByTagName("tbody")[0];
+  var rows=table1.getElementsByTagName("tr");
+  var i;
+  var ii;
+  var PriceQuality=0;
+  var price,Quality;
+  var total=0;
+  var totalBox=document.getElementById("totalall");
+
+  for (i=0;i<rows.length;i++)
+  {
+
+    for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
+    {
+    Quality=(rows[i].getElementsByTagName("td")[1].getElementsByTagName("input")[0].value);
+    price=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+
+    PriceQuality=Quality*price;
+    console.log(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+    rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value=PriceQuality;
+    rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value=PriceQuality*12;
+    
+  }
+  total=total+Number(rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value);
+    totalBox.value=total;
+}
+  
+
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+1;
@@ -308,12 +343,13 @@ row.id=id;
  var cell6 = row.insertCell(5);
  var cell7 = row.insertCell(6);
 
+
  cell1.outerHTML = `<th> ${x}</th>`; 
  cell2.innerHTML = '<input type="text" name="name" class="form-control" placeholder="اسم الصنف"/>  '; 
- cell3.innerHTML = ' <input type="number" name="product" class="form-control" min="0" max="1000" placeholder="#100#"/>'; 
- cell4.innerHTML = ' <input  type="number" name="quality" class="form-control"  min="0" max="1000" placeholder="#10288#" />'; 
- cell5.innerHTML = ' <input type="number" name="priceUnit" class="form-control"  min="0" max="1000" placeholder="#10288#" />';
- cell6.innerHTML = ' <input type="number" name="totalMoth" class="form-control"  min="0" max="1000" placeholder="#10288#"/>';  
+ cell3.innerHTML = ' <input type="number" name="quality" class="form-control" min="0" max="1000" placeholder="#100#"/>'; 
+ cell4.innerHTML = ' <input  type="number" name="priceUnit" class="form-control"  min="0" max="1000" placeholder="#10288#" />'; 
+ cell5.innerHTML = ' <input disabled type="number" name="totalMoth" class="form-control"  min="0" max="1000" placeholder="0000" />';
+ cell6.innerHTML = ' <input disabled type="number" name="totalyear" class="form-control"  min="0" max="1000" placeholder="#10288#"/>';  
  cell7.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
 }
  
