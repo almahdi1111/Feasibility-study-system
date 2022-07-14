@@ -309,7 +309,7 @@ row.id=id;
  var cell7 = row.insertCell(6);
 
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = ' <input type="text" name="name" class="form-control" />'; 
+ cell2.innerHTML = '<input type="text" name="name" class="form-control" placeholder="اسم الصنف"/>  '; 
  cell3.innerHTML = ' <input type="number" name="product" class="form-control" min="0" max="1000" placeholder="#100#"/>'; 
  cell4.innerHTML = ' <input  type="number" name="quality" class="form-control"  min="0" max="1000" placeholder="#10288#" />'; 
  cell5.innerHTML = ' <input type="number" name="priceUnit" class="form-control"  min="0" max="1000" placeholder="#10288#" />';
@@ -412,11 +412,11 @@ row.id=id;
  var cell6 = row.insertCell(5);
  var cell7 = row.insertCell(6);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = ' <input type="text" name="name" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="school" class="form-control" />'; 
- cell4.innerHTML = ' <input type="text" name="year" class="form-control" />'; 
- cell5.innerHTML = ' <input type="text" name="age" class="form-control" />'; 
-  cell6.innerHTML = ' <input type="text" name="age" class="form-control" />'; 
+ cell2.innerHTML = '<input type="text" name="item" class="form-control" placeholder=" البنـــــــد"/>  '; 
+ cell3.innerHTML = '<input type="text" name="supplier" class="form-control" placeholder="اسم المورد"/>  '; 
+ cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="0"/> '; 
+ cell5.innerHTML = '<input type="number" name="price" class="form-control" placeholder="0000"/> '; 
+  cell6.innerHTML = '<input type="number" name="totals" class="form-control" placeholder="0000000"/>  '; 
   cell7.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
 }
  
@@ -439,13 +439,13 @@ row.id=id;
  var cell4 = row.insertCell(3);
  var cell5 = row.insertCell(4);
  var cell6 = row.insertCell(5);
-  var cell7 = row.insertCell(6);
+   var cell7 = row.insertCell(6);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = ' <input type="text" name="name" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="school" class="form-control" />'; 
- cell4.innerHTML = ' <input type="text" name="year" class="form-control" />'; 
- cell5.innerHTML = ' <input type="text" name="age" class="form-control" />';
- cell6.innerHTML = ' <input type="text" name="age" class="form-control" />'; 
+ cell2.innerHTML = '<input type="text" name="occupation" class="form-control" placeholder="اسم الوظيفة "/>  '; 
+ cell3.innerHTML = '<input type="number" name="mony" class="form-control" placeholder="0000"/> '; 
+ cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="0"/>  ';
+ cell5.innerHTML = '<input type="number" name="totalMony" class="form-control" placeholder="0000"/>  '; 
+ cell6.innerHTML = '<input type="number" name="totalMony" class="form-control" placeholder="0000000"/>  '; 
  cell7.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
@@ -469,10 +469,10 @@ row.id=id;
  var cell5 = row.insertCell(4);
  var cell6 = row.insertCell(5);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = ' <input type="text" name="name" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="school" class="form-control" />'; 
- cell4.innerHTML = ' <input type="text" name="year" class="form-control" />'; 
- cell5.innerHTML = ' <input type="text" name="age" class="form-control" />';
+ cell2.innerHTML = '<input type="text" name="name" class="form-control" placeholder="نوع البناء  "/>'; 
+ cell3.innerHTML = '<input type="number" name="mater" class="form-control" placeholder="000"/>'; 
+ cell4.innerHTML = '<input type="text" name="year" class="form-control" placeholder="000"/>'; 
+ cell5.innerHTML = '<input type="number" name="totals" class="form-control" placeholder="000"/> ';
  cell6.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
@@ -498,8 +498,8 @@ row.id=id;
 
  var cell4 = row.insertCell(3);
  cell1.outerHTML = `<th> ${y}</th>`; 
- cell2.innerHTML = ' <input type="text" name="nam" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="schoo" class="form-control" />'; 
+ cell2.innerHTML = '<input type="text" name="varieties" class="form-control" placeholder=" الاصناف والمعدات"/> '; 
+ cell3.innerHTML = '<input type="number" name="rentAnnually" class="form-control" placeholder="000"/> '; 
 cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')"  ><i class="bx bx-trash me-1"></i> </input> '; 
  }
  
@@ -525,8 +525,8 @@ row.id=id;
 
  var cell4 = row.insertCell(3);
  cell1.outerHTML = `<th> ${y}</th>`; 
- cell2.innerHTML = ' <input type="text" name="nam" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="schoo" class="form-control" />'; 
+ cell2.innerHTML = '<input type="text" name="fees" class="form-control" placeholder="الرسوم الحكومية "/>  '; 
+ cell3.innerHTML = '<input type="number" name="AnnualFee" class="form-control" placeholder="0000"/> '; 
 cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')"  ><i class="bx bx-trash me-1"></i> </input> '; 
  }
  
@@ -551,8 +551,8 @@ row.id=id;
 
  var cell4 = row.insertCell(3);
  cell1.outerHTML = `<th> ${y}</th>`; 
- cell2.innerHTML = ' <input type="text" name="nam" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="schoo" class="form-control" />'; 
+ cell2.innerHTML = '<input type="text" name="Foundation" class="form-control" placeholder="مصاريف التأسيس "/>  '; 
+ cell3.innerHTML = '<input type="number" name="price" class="form-control" placeholder="0000"/> '; 
 cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')"  ><i class="bx bx-trash me-1"></i> </input> '; 
  }
  
@@ -579,13 +579,37 @@ row.id=id;
  var cell7 = row.insertCell(6);
  var cell8 = row.insertCell(7);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = ' <input type="text" name="name" class="form-control" />'; 
- cell3.innerHTML = ' <input type="text" name="school" class="form-control" />'; 
- cell4.innerHTML = ' <input type="text" name="year" class="form-control" />'; 
- cell5.innerHTML = ' <input type="text" name="age" class="form-control" />';
- cell6.innerHTML = ' <input type="text" name="age" class="form-control" />';
- cell7.innerHTML = ' <input type="text" name="age" class="form-control" />';
+ cell2.innerHTML = '<input type="text" name="Article" class="form-control" placeholder="نوع الماده"/> '; 
+ cell3.innerHTML = '<input type="text" name="liter" class="form-control" placeholder="لتر"/> '; 
+ cell4.innerHTML = '<input type="number" name="price" class="form-control" placeholder="00"/> '; 
+ cell5.innerHTML = '<input type="number" name="sum" class="form-control" placeholder="00"/> ';
+ cell6.innerHTML = '<input type="number" name="total" class="form-control" placeholder="000"/> ';
+ cell7.innerHTML = '<input type="number" name="total" class="form-control" placeholder="000"/> ';
  cell8.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
+ }
+ 
+
+ function deleteRow(id) 
+{
+	document.getElementById(id).remove() 
+	} function klklk()
+	{ 
+	var table = document.getElementById("kkkkkk");
+	// GET TOTAL NUMBER OF ROWS 
+var x =table.rows.length; 
+var id = "tbl"+x+12; 
+var row = table.insertRow(x); 
+row.id=id;
+ var cell1 = row.insertCell(0); 
+ var cell2 = row.insertCell(1); 
+ var cell3 = row.insertCell(2); 
+ var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+ cell1.outerHTML = `<th> ${x}</th>`; 
+ cell2.innerHTML = '<input type="text" name="name" class="form-control" placeholder="الماده   "/>'; 
+ cell3.innerHTML = '<input type="number" name="mater" class="form-control" placeholder="000"/>'; 
+ cell4.innerHTML = '<input type="text" name="year" class="form-control" placeholder="000"/>'; 
+ cell5.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
  //////////////////////////////////////////////////////////////////////////////////

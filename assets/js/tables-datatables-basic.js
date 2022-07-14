@@ -81,7 +81,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
           // Use this for enabling/changing valid/invalid class
           // eleInvalidClass: '',
           eleValidClass: '',
-          rowSelector: '.col-sm-12'
+          rowSelector: function (field, ele) {
+            // field is the field name & ele is the field element
+            return '.col-sm-12';
+          }
+  
         }),
         submitButton: new FormValidation.plugins.SubmitButton(),
         // defaultSubmit: new FormValidation.plugins.DefaultSubmit(),

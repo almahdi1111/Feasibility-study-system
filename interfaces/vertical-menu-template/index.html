@@ -6,7 +6,7 @@
   dir="rtl"
   data-theme="theme-default"
   data-assets-path="../../assets/"
-  data-template="vertical-menu-template"
+  data-template="vertical-menu-template-no-customizer"
 >
   <head>
     <meta charset="utf-8" />
@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>صفحة الادمن </title>
+    <title>إدراة المستخدمين  </title>
 
     <meta name="description" content="" />
 
@@ -35,33 +35,38 @@
     <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
     <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
 
-    <!-- Core CSS -->
+   <!-- Core CSS -->
     <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../../assets/css/demo.css" />
+ <!-- Vendors CSS -->
+ <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+ <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
+ <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+ <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+ <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+ <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+ <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" />
 
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
 
+    
     <!-- Helpers -->
     <script src="../../assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
-    <script src="../../assets/vendor/js/template-customizer.js"></script>
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+      <script src="../../assets/vendor/js/template-customizer.js"></script>
+
+      <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../../assets/js/config.js"></script>
   </head>
-
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-        <!-- Menu --> <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <!-- Menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
@@ -130,9 +135,9 @@
           <ul class="menu-inner py-1">
             <!-- Dashboards -->
             <li class="menu-item active">
-              <a href="dashboards-analytics -user.html" class="menu-link">
+                <a href=" dashboards-analytics -user.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="الصفحة الرئيسية">الصفحة الرئيسية</div>
+                <div data-i18n="الصفحة الرئيسية"> الصفحة الرئيسية</div>
               </a>
             </li>
 
@@ -183,7 +188,7 @@
           </li>
           <li class="menu-header small text-uppercase"><span class="menu-header-text">متفرقعات</span></li>
           <li class="menu-item">
-            <a href="index.html" class="menu-link">
+            <a href="technical support message.html" class="menu-link">
               <i class="menu-icon tf-icons bx bx-support"></i>
             <div data-i18n="رسائل الدعم الفني">رسائل الدعم الفني</div>
           </a>
@@ -207,6 +212,14 @@
 
               <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
                 
+              <!--titel-->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item navbar-search-wrapper mb-0">
+
+                  <span class="span-1">إدراة المستخدمين</span>
+
+                </div>
+              </div>
                 <!-- Search -->
               
                 <!-- /Search -->
@@ -221,7 +234,7 @@
                       <li>
                         <a class="dropdown-item" href="javascript:void(0);" data-language="en">
                           <i class="flag-icon flag-icon-ye flag-icon-squared fs-4 rounded-circle me-1"></i>
-                          <span class="align-middle">العربية/span>
+                          <span class="align-middle">العربية</span>
                         </a>
                       </li>
                       <li>
@@ -234,13 +247,13 @@
                   </li>
                   <!--/ Language -->
 
-                  <!-- Style Switcher -->
-                  <li class="nav-item me-2 me-xl-0">
-                    <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
-                      <i class="bx bx-sm"></i>
-                    </a>
-                  </li>
-                  <!--/ Style Switcher -->
+                 <!-- Style Switcher -->
+                 <li class="nav-item me-2 me-xl-0">
+                  <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
+                    <i class="bx bx-sm"></i>
+                  </a>
+                </li>
+                <!--/ Style Switcher -->
 
                   <!-- Notification -->
                   <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-2">
@@ -257,7 +270,7 @@
                     <ul class="dropdown-menu dropdown-menu-end py-0">
                       <li class="dropdown-menu-header border-bottom">
                         <div class="dropdown-header d-flex align-items-center py-3">
-                          <h5 class="text-body me-auto mb-0">Notification</h5>
+                          <h5 class="text-body me-auto mb-0">الاشعارات</h5>
                           <a
                             href="javascript:void(0)"
                             class="dropdown-notifications-all text-body"
@@ -479,7 +492,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                       <li>
-                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <a class="dropdown-item" href="dashboards-analytics.html">
                           <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                               <div class="avatar avatar-online">
@@ -512,7 +525,7 @@
                         <div class="dropdown-divider"></div>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
+                        <a class="dropdown-item" href="auth-login-basic.html" target="_blank">
                           <i class="bx bx-power-off me-2"></i>
                           <span class="align-middle">تسجيل الخروج</span>
                         </a>
@@ -529,81 +542,227 @@
           </nav>
 
           <!-- / Navbar -->
-
+         
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="card overflow-hidden">
-              <!-- Popular Articles -->
-              <div class="help-center-popular-articles py-5">
-                <div class="container-xl">
-                  <h3 class="text-center pb-3 mt-2">مرحباً بك في إدارة النظام   👋</h3>
-                  <hr/>
-                  <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                      <div class="row mb-3">
-                        <div class="col-md-4 mb-4 mb-md-0">
-                          <div class="card shadow-none border">
-                            <div class="card-body text-center">
-                              <img
-                                class="mb-4"
-                                src="../../assets/img/icons/unicons/add users1.jpg."
-                                height="100"
-                                alt="Help center articles"
-                              />
-                              <h5>إدراة المستخدمين</h5>
-                              <a class="btn btn-label-primary" href="index.html">إضافة مستخدم</a>
-                            </div>
+<div class="row g-4 mb-4">
+                <div class="col-sm-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="content-left">
+                          <span>الجلسات</span>
+                          <div class="d-flex align-items-end mt-2">
+                            <h4 class="me-2 mb-0">21,459</h4>
+                            <small class="text-success">(+29%)</small>
                           </div>
+                          <small>عدد المستخدمين</small>
                         </div>
-
-                        <div class="col-md-4 mb-4 mb-md-0">
-                          <div class="card shadow-none border">
-                            <div class="card-body text-center">
-                              <img
-                                class="mb-4"
-                                src="../../assets/img/icons/unicons/Software engineer-rafiki.svg"
-                                height="100"
-                                alt="Help center articles"
-                              />
-                              <h5>تقارير الدراسات والمشاريع</h5>
-                              <a class="btn btn-label-primary" href="./pages-help-center-article.html">تقارير الدراسات </a>
-                            </div>
+                        <span class="badge bg-label-primary rounded p-2">
+                          <i class="bx bx-user bx-sm"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="content-left">
+                          <span>مستخدمين دافعين</span>
+                          <div class="d-flex align-items-end mt-2">
+                            <h4 class="me-2 mb-0">4,567</h4>
+                            <small class="text-success">(+18%)</small>
                           </div>
+                          <small> تحليل الاسبوع الماضي </small>
                         </div>
-
-                        <div class="col-md-4">
-                          <div class="card shadow-none border">
-                            <div class="card-body text-center">
-                              <img
-                                class="mb-4"
-                                src="../../assets/img/icons/unicons/Messages supportss.png"
-                                height="100"
-                                alt="Help center articles"
-                              />
-                              <h5>رسائل الدعم الفني</h5>
-                              <a class="btn btn-label-primary" href="./pages-help-center-article.html">رسائل الدعم الفني</a>
-                            </div>
+                        <span class="badge bg-label-danger rounded p-2">
+                          <i class="bx bx-user-plus bx-sm"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="content-left">
+                          <span>مستخدم نشط </span>
+                          <div class="d-flex align-items-end mt-2">
+                            <h4 class="me-2 mb-0">19,860</h4>
+                            <small class="text-danger">(-14%)</small>
                           </div>
+                          <small>تحليل الاسبوع الماضي</small>
                         </div>
+                        <span class="badge bg-label-success rounded p-2">
+                          <i class="bx bx-group bx-sm"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-start">
+                        <div class="content-left">
+                          <span>مستخدم غير نشط </span>
+                          <div class="d-flex align-items-end mt-2">
+                            <h4 class="me-2 mb-0">237</h4>
+                            <small class="text-success">(+42%)</small>
+                          </div>
+                          <small>تحليل الاسبوع الماضي</small>
+                        </div>
+                        <span class="badge bg-label-warning rounded p-2">
+                          <i class="bx bx-user-voice bx-sm"></i>
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- /Popular Articles -->
+              <!-- DataTable with Buttons -->
+              <div class="card">
+                
+                <div class="card-datatable table-responsive pt-0">
+                  <table class="datatables-basic table table-bordered">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th></th>
+                        <th>تسلسل</th>
+                        <th>اسم المستخدم</th>
+                        <th>البريد الالكتروني</th>
+                        <th>تاريخ التسجيل</th>
+                        <th>رقم الهاتف</th>
+                        <th>الحالة</th>
+                        <th>الاجراءات </th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+              <!-- Modal to add new record -->
+              <div class="offcanvas offcanvas-end" id="add-new-record">
+                <div class="offcanvas-header border-bottom">
+                  <h5 class="offcanvas-title" id="exampleModalLabel">إضافة مستخدم</h5>
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body flex-grow-1">
+                  <form class="add-new-record row g-2 pt-0" id="form-add-new-record" onsubmit="return false">
+                    <div class="col-sm-12">
+                      <label class="form-label" for="basicUsername">اسم المستخدم </label>
+                      <div class="input-group input-group-merge">
+                        <span id="basicUsername2" class="input-group-text"><i class="bx bx-user"></i></span>
+                        <input
+                          type="text"
+                          id="basicUsername"
+                          class="form-control dt-full-name"
+                          name="basicUsername"
+                          placeholder="ادخل الاسم"
+                          aria-label="ادخل الاسم"
+                          aria-describedby="basicUsername2"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label class="form-label" for="basicPost">نوع المستخدم</label>
+                      <div class="input-group input-group-merge">
+                        <span id="basicPost2" class="input-group-text"><i class="bx bxs-briefcase"></i></span>
+                        <input
+                          type="text"
+                          id="basicPost"
+                          name="basicPost"
+                          class="form-control dt-post"
+                          placeholder=" نوع المستخدم"
+                          aria-label="نوع المستخدم  "
+                          aria-describedby="basicPost2"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label class="form-label" for="basicEmail">البريد الالكتروني</label>
+                      <div class="input-group input-group-merge">
+                        <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                        <input
+                          type="text"
+                          id="basicEmail"
+                          name="basicEmail"
+                          class="form-control dt-email"
+                          placeholder="Farming@gmali.com"
+                          aria-label="Farming@gmali.com"
+                        />
+                      </div>
+                      <div class="form-text">يمكنك استخدام الحروف والارقام</div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label class="form-label" for="basicDate">تاريخ التسجيل</label>
+                      <div class="input-group input-group-merge">
+                        <span id="basicDate2" class="input-group-text"><i class="bx bx-calendar"></i></span>
+                        <input
+                          type="text"
+                          class="form-control dt-date"
+                          id="basicDate"
+                          name="basicDate"
+                          aria-describedby="basicDate2"
+                          placeholder="1/22/2022"
+                          aria-label="1/22/2022"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label class="form-label" for="phone-number-mask">رقم الهاتف</label>
+                      <div class="input-group input-group-merge">
+                        <span id="basicPhone2" class="input-group-text"> +967<i class="bx bx-phone"></i></span>
+                        <input
+                          type="tel"
+                          id="phone-number-mask"
+                          name="basicPhone"
+                          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                          class="form-control dt-phone"
+                          placeholder="774141412"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <label class="form-label" for="user-role">نوع المستخدم </label>
+                      <select id="user-role" class="form-select">
+                        <option value="User">مستخدم</option>
+                        <option value="Investor">مستثمر</option>
+                        <option value="Officer">موظف</option>
+                        <option value="Administratives">إداري</option>
+                        <option value="Admin">مشرف</option>
+                      </select>
+                    </div>
 
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary btn-add-event me-1 me-sm-3">ارسال</button>
+                      <button type="submit" class="btn btn-primary btn-Update-event me-1 me-sm-3">تحديث</button>
+                      <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">إلغاء</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!--/ DataTable with Buttons -->
+              
+ 
             </div>
             <!-- / Content -->
 
             <!-- Footer -->
-         <!-- فارغ -->
+         
             <!-- / Footer -->
 
-            <div class="content-backdrop fade"></div>
-            </div>
           </div>
           <!-- Content wrapper -->
         </div>
@@ -611,10 +770,8 @@
       </div>
 
       <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
 
       <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-      <div class="drag-target"></div>
     </div>
     <!-- / Layout wrapper -->
 
@@ -632,12 +789,36 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
+    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
+    <script src="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/jszip/jszip.js"></script>
+    <script src="../../assets/vendor/libs/pdfmake/pdfmake.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script>
+   
+    <!-- Flat Picker -->
+    <script src="../../assets/vendor/libs/moment/moment.js"></script>
+    <script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script>
+    <!-- Row Group JS -->
+    <script src="../../assets/vendor/libs/datatables-rowgroup/datatables.rowgroup.js"></script>
+    <script src="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.js"></script>
+    <!-- Form Validation -->
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
 
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../../assets/js/dashboards-analytics.js"></script>
+    <script src="../../assets/js/tables-datatables-basic.js"></script>
+    
+    
+    
   </body>
 </html>
