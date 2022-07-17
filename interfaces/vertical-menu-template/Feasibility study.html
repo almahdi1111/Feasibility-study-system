@@ -1116,7 +1116,7 @@
 						<th scope="col">اسم المنافس</th> 
 						<th scope="col">الخدمة او المنتج </th>
 						<th scope="col">سعر المنتج</th> 
-						<th scope="col">القيمة المضافع</th> 
+						<th scope="col">القيمة المضافة</th> 
 						<th scope="col"> إضافة  </th>
 					</tr>
 				</thead>
@@ -1317,26 +1317,26 @@
                 <th scope="col">سعر الوحدة </th> 
                 <th scope="col"> إجمالي شهري </th>
                 <th scope="col"> إجمالي سنوي </th>  
-                <th scope="col"> إضافة  </th>
+                <th scope="col"> الاجراءات  </th>
               </tr>
             </thead>
               <tbody> 
                 <tr> 
                 <th scope="row">1</th> 
                 <td class="col-sm-2"> 
-                  <input type="text" name="name" class="form-control" placeholder="اسم المنافس"/> 
+                  <input type="text" name="name" class="form-control" placeholder="اسم الصنف"/> 
                 </td> 
                 <td class="col-sm-2"> 
-                  <input id="product" type="number" name="product" class="form-control"   min="0" max="1000" placeholder="#100#"/>
+                  <input id="quality" type="number" name="quality" onkeydown="return validateDigitsOnly(event)" class="form-control"   min="0" max="1000" placeholder="0000"/>
                 </td> 
                 <td class="col-sm-2"> 
-                  <input ID="priceUnit" type="number" name="priceUnit" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
+                  <input ID="priceUnit" type="number" name="priceUnit" onkeydown="return validateDigitsOnly(event)" class="form-control"  min="0" max="1000" placeholder="000000"/>
                 </td>
                 <td class="col-sm-2"> 
-                  <input disabled type="number" name="quality" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
+                  <input disabled type="number" name="totalMoth" class="form-control"  min="0" max="1000" placeholder="0000000"/>
                 </td> 
-                <td class="col-sm-2"> 
-                  <input disabled type="number" name="totalMoth" class="form-control"  min="0" max="1000" placeholder="#10288#"/>
+                <td class="col-sm-4"> 
+                  <input disabled type="number" name="totalyear" class="form-control"  min="0" max="100000000" placeholder="0000000"/>
                 </td> 
                 <td class="col-sm-1">
                   <input  type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Revenuerow()" value="إضافة" /> 
@@ -1348,9 +1348,9 @@
                 <tr>
                   <th scope="col"></th> 
                   <th scope="col">الاجمــــــــــــــالي </th> 
-                  <th scope="col"> </th>
-                  <th scope="col"> </th> 
-                  <th scope="col"> </th> 
+                  <th scope="col"> <input id="quality" disabled type="number" name="totalmonthly" class="form-control"/></th>
+                  <th scope="col"> <input id="priceUnit" disabled type="number" name="totalmonthly" class="form-control"/> </th> 
+                  <th scope="col"> <input id="totalmonthly" disabled type="number" name="totalmonthly" class="form-control"/> </th> 
                   <th scope="col"> <input id="totalall" disabled type="number" name="totalall" class="form-control"/> </th>
                   <th scope="col">   </th>
 
@@ -1373,7 +1373,7 @@
                   <th scope="col">تسلسل</th> 
                   <th scope="col">النشاط</th> 
                   <th scope="col">المبلغ </th>
-                  <th scope="col">حذف </th> 
+                  <th scope="col">الاجراءات </th> 
                   </tr>
               </thead>
                 <tbody> 
@@ -1418,7 +1418,7 @@
 						<th scope="col">#</th> 
 						<th scope="col">نوع المخاطر</th> 
 						<th scope="col">شرح المخاطر كتابياً</th>
-						<th scope="col">حذف </th> 
+						<th scope="col">الاجراءات </th> 
 						</tr>
 				</thead>
 					<tbody> 
@@ -1450,7 +1450,7 @@
               <th scope="col">#</th> 
               <th scope="col">أسلوب الحد من المخاطر </th> 
               <th scope="col">شرح الاسلوب كتابياً</th>
-              <th scope="col">حذف </th> 
+              <th scope="col">الاجراءات</th> 
               </tr>
           </thead>
             <tbody> 
@@ -1495,43 +1495,44 @@
                        
 
 
-         <!-- Social Links -->
+         <!-- الدراسة الفنية  -->
          <div id="social-links" class="content">
+
 		  <!-- بدايها جدول الالات والمعدات والاثاث -->
 				  <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light"> التجهيزات (الالات والمعدات والاثاث ووسائل النقل الخ... !)   </span></h4>
           <div class="table-responsive text-nowrap">
-          <table class="table table-bordered" id="nnnn">
+          <table class="table table-bordered" id="Furniture">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
-            <th scope="col">البند</th> 
+            <th scope="col">البنـــــــــــــــــــــد</th> 
             <th scope="col">اسم المورد</th> 
-						<th scope="col">العدد </th>
-						<th scope="col">السعر</th> 
-						<th scope="col">الاجمالي</th> 
-						<th scope="col">اضافة </th>
+						<th scope="col"> العــــــــــــدد </th>
+						<th scope="col"> السعــــــــــــــر</th> 
+						<th scope="col">الاجمالي الكلي</th> 
+						<th scope="col">الاجراءات </th>
 					</tr>
 				</thead>
 					<tbody> 
 						<tr> 
 						<th scope="row">1</th> 
-						<td class="col-sm-3"> 
+						<td class="col-sm-4"> 
 							<input type="text" name="item" class="form-control" placeholder=" البنـــــــد"/> 
             </td> 
-            <td class="col-sm-3"> 
+            <td class="col-sm-2"> 
 							<input type="text" name="supplier" class="form-control" placeholder="اسم المورد"/> 
 						</td> 
 						<td class="col-sm-2"> 
-							<input type="number" name="total" class="form-control" placeholder="0"/>
+							<input  type="number" name="amount" class="form-control" placeholder="00"/>
 						</td> 
 						<td class="col-sm-2"> 
-							<input type="number" name="price" class="form-control" placeholder="0000"/>
+							<input type="number" name="prices" class="form-control" placeholder="0000"/>
 						</td>
-						<td class="col-sm-3"> 
-							<input type="number" name="totals" class="form-control" placeholder="0000000"/> 
+						<td class="col-sm-2"> 
+							<input disabled type="text" name="totals" class="form-control" placeholder="0000000"/> 
 						</td> 
               <td class="col-sm-1">
-                <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="mmm()" value="إضافة" /> 
+                <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Furniture()" value="إضافة" /> 
               </td> 					
              
 						
@@ -1542,9 +1543,9 @@
               <th scope="col"> </th> 
               <th scope="col"> </th> 
               <th scope="col"> الاجمــــــــــــــالي</th>
-              <th scope="col"> </th> 
-              <th scope="col"> </th> 
-              <th scope="col"> </th>
+              <th scope="col"> <input id="amount" disabled type="number" name="amount" class="form-control"/></th>
+              <th scope="col"> <input id="prices" disabled type="number" name="prices" class="form-control"/></th>
+              <th scope="col"> <input id="totalas" disabled type="number" name="totalas" class="form-control"/></th>
               <th scope="col"> </th>
             </tr>
           </thead>
@@ -1558,16 +1559,16 @@
 				  
 				  <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">   القوى العاملة اللازمة لتشغيل المشروع</span></h4>
           <div class="table-responsive text-nowrap">
-          <table class="table table-bordered" id="nnnnn">
+          <table class="table table-bordered" id="staffs">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
 						<th scope="col">المسمى الوظيفي</th> 
 						<th scope="col">الراتب الشهري</th> 
-						<th scope="col"> العدد  </th>
-            <th scope="col">  الراتب الشهري </th>
-            <th scope="col"> الراتب السنوي </th>						
-						<th scope="col"> اضافة </th>
+						<th scope="col"> عدد الموظفين  </th>
+            <th scope="col">   اجمالي الرواتب الشهرية </th>
+            <th scope="col"> اجمالي الرواتب السنوية </th>						
+						<th scope="col"> الاجراءات </th>
 					</tr>
 				</thead>
 					<tbody> 
@@ -1577,19 +1578,19 @@
 							<input type="text" name="occupation" class="form-control" placeholder="اسم الوظيفة "/> 
 						</td>  
 						<td class="col-sm-2"> 
-							<input type="number" name="mony" class="form-control" placeholder="0000"/>
+							<input type="number" name="monys" id="monys" class="form-control" placeholder="0000"/>
 						</td>
 						<td class="col-sm-2"> 
-							<input type="number" name="total" class="form-control" placeholder="0"/> 
+							<input type="number" name="Nemployee" id="Nemployee" class="form-control" placeholder="0"/> 
 						</td> 
 						<td class="col-sm-2"> 
-							<input type="number" name="totalMony" class="form-control" placeholder="0000"/> 
+							<input disabled type="number" name="totalMony" class="form-control" placeholder="0000000"/> 
             </td> 
             <td class="col-sm-2"> 
-							<input type="number" name="totalMony" class="form-control" placeholder="0000"/> 
+							<input  disabled type="number" name="totalsyears" class="form-control" placeholder="0000000000"/> 
 						</td>
-            <td class="col-sm-2"> 
-              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="vvvv()" value="إضافة" /> 
+            <td class="col-sm-1"> 
+              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="staffs()" value="إضافة" /> 
 						</td> 
 						
 						</tr> 
@@ -1598,10 +1599,10 @@
             <tr>
               <th scope="col"></th> 
               <th scope="col">الاجمــــــــــــــالي </th> 
-              <th scope="col"> </th>
-              <th scope="col"> </th> 
-              <th scope="col">   </th>
-              <th scope="col">    </th>
+              <th scope="col"> <input id="mony" disabled type="number" name="mony" class="form-control"/></th>
+              <th scope="col"> <input id="Nemployee" disabled type="number" name="Nemployee" class="form-control"/></th>
+              <th scope="col"> <input id="totalMony" disabled type="number" name="totalMony" class="form-control"/></th>
+              <th scope="col"> <input id="totalsyears" disabled type="number" name="totalsyears" class="form-control"/></th>
               <th scope="col">   </th>						
             </tr>
           </thead>
@@ -1616,7 +1617,7 @@
 				  
 				  <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">الانشات والمباني </span></h4>
           <div class="table-responsive text-nowrap">  
-          <table class="table table-bordered" id="nnnnnn">
+          <table class="table table-bordered" id="Buildings">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
@@ -1624,26 +1625,26 @@
 						<th scope="col"> سعر المتر </th>
 						<th scope="col">المساحة الاجمالية </th> 
 						<th scope="col"> الاجمالي</th> 
-						<th scope="col">  إضافة</th>
+						<th scope="col">  الاجراءات</th>
 					</tr>
 				</thead>
 					<tbody> 
 						<tr> 
 						<th scope="row">1</th> 
 						<td class="col-sm-4"> 
-							<input type="text" name="name" class="form-control" placeholder="نوع البناء  "/> 
+							<input type="text" name="Builid" class="form-control" placeholder="نوع البناء  "/> 
 						</td> 
 						<td> 
-							<input type="number" name="mater" class="form-control" placeholder="000"/>
+							<input type="number" name="Area" id="Area" class="form-control" placeholder="000"/>
 						</td> 
 						<td class="col-sm-2"> 
-							<input type="text" name="year" class="form-control" placeholder="000"/>
+							<input type="number" name="Area" id="Area" class="form-control" placeholder="000"/>
 						</td>
 						<td class="col-sm-2"> 
-							<input type="number" name="totals" class="form-control" placeholder="000"/>
+							<input disabled type="number" name="Totalsa" class="form-control" placeholder="000"/>
 						</td> 
             <td class="col-sm-1">
-              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="mmmmm()" value="إضافة" /> 
+              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Buildings()" value="إضافة" /> 
             </td> 	 
 						
 						</tr> 
@@ -1654,7 +1655,7 @@
               <th scope="col">إجمالي تكلفة الانشاءات والمباني </th> 
               <th scope="col"> </th>
               <th scope="col"> </th> 
-              <th scope="col"> </th> 
+              <th scope="col"> <input id="Totalsa" disabled type="number" name="Totalsa" class="form-control"/></th>
               <th scope="col"> </th>
             </tr>
           </thead>
@@ -1670,13 +1671,13 @@
 				  
 				  <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">الايجارات ! </span></h4>
           <div class="table-responsive text-nowrap">
-          <table class="table table-bordered" id="rentalsID">
+          <table class="table table-bordered" id="rentals">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
 						<th scope="col">الصنف</th> 
 						<th scope="col">الايجار السنوي </th>
-						<th scope="col">حذف </th> 
+						<th scope="col">الاجراءات</th> 
 						
 					</tr>
 				</thead>
@@ -1687,11 +1688,11 @@
 							<input type="text" name="varieties" class="form-control" placeholder=" الاصناف والمعدات"/> 
 						</td> 
 						<td class="col-sm-3"> 
-							<input type="number" name="rentAnnually" class="form-control" placeholder="000"/>
+							<input type="number" name="rentAnnually" id="rentAnnually" class="form-control" placeholder="000"/>
 						</td> 
-						<td class="col-sm-2"> 
-              <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')" ><i class="bx bx-trash me-1"></i> </input> 
-						</td>
+            <td class="col-sm-1">
+              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="rentals()" value="إضافة" /> 
+            </td>
 						
 						</tr> 
           </tbody>
@@ -1699,32 +1700,25 @@
             <tr>
               <th scope="col"></th> 
               <th scope="col">الاجمالي السنوي للإيجارات</th> 
-              <th scope="col">  </th>
+              <th scope="col"> <input id="rentAnnually" disabled type="number" name="rentAnnually" class="form-control"/></th>
               <th scope="col"> </th> 
               
             </tr>
           </thead> 
         </table>
         </div>
-						<td>
-							<input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="rentals()" value="إضافة" /> 
-							
-						</td>
 						<br><br>
-							<!--نهايه جدول  الايجارات-->
-							
-							
 							<!--[جدول الرسوم الحكومية]   -->
 				  
 				  <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">الرسوم الحكومية والضرائب ! </span></h4>
           <div class="table-responsive text-nowrap">
-          <table class="table table-bordered" id="mmmmmm">
+          <table class="table table-bordered" id="Taxes">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
 						<th scope="col">البند</th> 
 						<th scope="col">الرسوم السنوية </th>
-						<th scope="col">حذف </th> 
+						<th scope="col">الاجراءات</th> 
 						
 					</tr>
 				</thead>
@@ -1737,9 +1731,9 @@
 						<td class="col-sm-3"> 
 							<input type="number" name="AnnualFee" class="form-control" placeholder="0000"/>
 						</td> 
-						<td class="col-sm-2"> 
-              <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')" ><i class="bx bx-trash me-1"></i> </input> 
-						</td>
+            <td class="col-sm-1">
+              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Taxes()" value="إضافة" /> 
+            </td> 
 						
 						</tr> 
           </tbody> 
@@ -1754,26 +1748,18 @@
           </thead>
         </table>
         </div>
-						<td>
-							<input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="nnnnnnn()" value="إضافة" /> 
-							
-						</td>
 						<br><br>
-							<!--نهايه جدول ادرة الايجارات-->
-							
-							
-							
 							<!--بدايها جدول  مصاريف التاسيس -->
 				  
 				  <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">مصاريف التاسيس ! </span></h4>
           <div class="table-responsive text-nowrap">
-          <table class="table table-bordered" id="mmmmmmm">
+          <table class="table table-bordered" id="FoundationExpenses">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
 						<th scope="col">البنــــــــــــــــــــــد</th> 
 						<th scope="col"> السعـــــــــر </th>
-						<th scope="col">حذف </th> 
+						<th scope="col">الاجراءات</th> 
 						
 					</tr>
 				</thead>
@@ -1786,9 +1772,9 @@
 						<td class="col-sm-3"> 
 							<input type="number" name="price" class="form-control" placeholder="0000"/>
 						</td> 
-						<td class="col-sm-2"> 
-              <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')" ><i class="bx bx-trash me-1"></i> </input> 
-						</td>
+            <td class="col-sm-1">
+              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="FoundationExpenses()" value="إضافة" /> 
+            </td> 
 						
 						</tr> 
           </tbody> 
@@ -1803,56 +1789,49 @@
           </thead>
         </table>
         </div>
-						<td>
-							<input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="nnnnnnnn()" value="إضافة" /> 
-							
-						</td>
 						<br>
-						<br>
+						<br>							
 						
-							<!--نهايه جدول مصاريف التاسيس-->
-							
-							
-					<!-- بدايها جدول المواد الخام						-->
+					<!--  جدول المواد الخام						-->
 				  
           <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">   المواد الخام !</span></h4>
           <div class="table-responsive text-nowrap">  
-          <table class="table table-bordered" id="nnnnnnnnnn">
+          <table class="table table-bordered" id="Materials">
 						<thead class="table-info">
 					<tr>
 						<th scope="col">#</th> 
-						<th scope="col">المادة</th> 
-						<th scope="col">الوحدة  </th>
+            <th scope="col">نوع المـــــادة</th> 
+						<th scope="col">وحدة القياس  </th>
 						<th scope="col">سعر الوحدة</th> 
-						<th scope="col"> الكمية المطلوبة شهريأ</th>
+						<th scope="col"> الكمية الشهرية</th>
 						<th scope="col"> الاجمالي الشهري</th>						
 						<th scope="col"> الاجمالي السنوي</th>
-						<th scope="">اضافة</th> 
+						<th scope="">الاجراءات</th> 
 					</tr>
 				</thead>
 					<tbody> 
 						<tr> 
 						<th scope="row">1</th> 
-						<td class="col-sm-3"> 
+						<td class="col-sm-4"> 
 							<input type="text" name="Article" class="form-control" placeholder="نوع الماده"/> 
-						</td> 
+            </td>  
 						<td class="col-sm-2"> 
 							<input type="text" name="liter" class="form-control" placeholder="لتر"/>
 						</td> 
 						<td class="col-sm-2"> 
-							<input type="number" name="price" class="form-control" placeholder="100"/>
+							<input type="number" name="Uint" id="Unit" class="form-control" placeholder="000"/>
 						</td>
-						<td class="col-sm-3"> 
-							<input type="number" name="sum" class="form-control" placeholder="200"/> 
+						<td class="col-sm-2"> 
+							<input type="number" name="qualitReqiredMonthly" id="qualitReqiredMonthly" class="form-control" placeholder="0000"/> 
+						</td> 
+						<td class="col-sm-2"> 
+							<input disabled type="number" name="totalss" class="form-control" placeholder="00000"/> 
 						</td> 
 						<td class="col-sm-3"> 
-							<input type="number" name="total" class="form-control" placeholder="3000"/> 
-						</td> 
-						<td class="col-sm-3"> 
-							<input type="number" name="total" class="form-control" placeholder="3000"/> 
+							<input disabled type="number" name="totalsss" class="form-control" placeholder="000000"/> 
 						</td> 
 						<td class="col-sm-1">
-              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="mmmmmmmm()" value="إضافة" /> 
+              <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="Materials()" value="إضافة" /> 
             </td> 
 						
 						</tr> 
@@ -1864,8 +1843,8 @@
               <th scope="col">  </th>
               <th scope="col"> </th> 
               <th scope="col">   </th>
-              <th scope="col">  </th>						
-              <th scope="col">  </th>
+              <th scope="col" > <input id="totalss" disabled type="number" name="totalss" class="form-control"/></th>
+              <th scope="col"> <input id="totalsss" disabled type="number" name="totalsss" class="form-control"/></th>
               <th scope=""></th> 
             </tr>
           </thead>
@@ -1877,30 +1856,30 @@
      <!--جدول المنافع العامه-->
      <h4 class="breadcrumb-wrapper py-3 mb-4"><span class="text-muted fw-light">المنافع العامة  </span></h4>
      <div class="table-responsive text-nowrap">
-     <table class="table table-bordered" id="kkkkkk">
+     <table class="table table-bordered" id="benefits">
     <thead class="table-info">
   <tr>
     <th scope="col">#</th> 
     <th scope="col"> البند</th> 
     <th scope="col">  التكلفة الشهرية </th>
     <th scope="col"> التكلفة السنوية </th> 
-    <th scope="col">  إضافة</th>
+    <th scope="col">  الاجراءات</th>
   </tr>
 </thead>
   <tbody> 
     <tr> 
     <th scope="row">1</th> 
     <td class="col-sm-4"> 
-      <input type="text" name="name" class="form-control" placeholder="البند    "/> 
-    </td> 
-    <td> 
-      <input type="number" name="mater" class="form-control" placeholder="000"/>
+      <input type="text" name="item" class="form-control" placeholder="البند    "/> 
     </td> 
     <td class="col-sm-2"> 
-      <input type="text" name="year" class="form-control" placeholder="000"/>
+      <input type="number" name="Monthlycost" class="form-control" placeholder="00000"/>
+    </td> 
+    <td > 
+      <input disabled type="number" name="yearcost" class="form-control" placeholder="0000000"/>
     </td> 
     <td class="col-sm-1">
-      <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="klklk()" value="إضافة" /> 
+      <input type="button" class="btn rounded-pill btn-success" id="add-row" onclick="benefits()" value="إضافة" /> 
     </td> 	 
     
     </tr> 
@@ -1909,8 +1888,8 @@
     <tr>
       <th scope="col"></th> 
       <th scope="col">   الاجمــــــــــــــالي</th> 
-      <th scope="col"> </th>
-      <th scope="col"> </th> 
+      <th scope="col"> <input id="Monthlycost" disabled type="number" name="yearcost" class="form-control"/></th>
+      <th scope="col"> <input id="yearcost" disabled type="number" name="yearcost" class="form-control"/></th>
       <th scope="col"> </th> 
     </tr>
   </thead>

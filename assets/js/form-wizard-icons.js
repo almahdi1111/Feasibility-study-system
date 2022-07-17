@@ -291,7 +291,7 @@ row.id=id;
  function calculateTotals()
  {
   var price=document.getElementById("priceUnit").value;
-  var product=document.getElementById("product").value;
+  var quality=document.getElementById("quality").value;
 
  }
 function deleteRow(id) 
@@ -323,6 +323,7 @@ function Revenuerow()
     console.log(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
     rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value=PriceQuality;
     rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value=PriceQuality*12;
+
     
   }
   total=total+Number(rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value);
@@ -409,7 +410,7 @@ cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="
 {
 	document.getElementById(id).remove() 
 	} function DangerStyle()
-	{ 
+	{  
 	var table = document.getElementById("DangerStyle");
 	// GET TOTAL NUMBER OF ROWS 
 var y =table.rows.length; 
@@ -429,12 +430,46 @@ cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="
  }
  
  //اول جدوال في الدراسة الفنية الاثاث والمعدات
+  function calculateTotals()
+ {
+  var amount=document.getElementById("amount").value;
+  var prices=document.getElementById("prices").value;
+
+ }
+
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function mmm()
+	} function Furniture()
 	{ 
-	var table = document.getElementById("nnnn");
+  var table = document.getElementById("Furniture");
+  
+  
+  var table1 = document.getElementById("Furniture").getElementsByTagName("tbody")[0];
+  var rows=table1.getElementsByTagName("tr");
+  var i;
+  var ii;
+  var PricesAmount=0;
+  var prices,Amount;
+  var total=0;
+  var totalBox=document.getElementById("totalas");
+
+  for (i=0;i<rows.length;i++)
+  {
+
+    for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
+    {
+      Amount=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+    prices=(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+
+    PricesAmount=Amount*prices;
+    console.log(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+    rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value=PricesAmount;
+    
+  }
+  total=total+Number(rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value);
+    totalBox.value=total;
+}
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+5; 
@@ -450,20 +485,57 @@ row.id=id;
  cell1.outerHTML = `<th> ${x}</th>`; 
  cell2.innerHTML = '<input type="text" name="item" class="form-control" placeholder=" البنـــــــد"/>  '; 
  cell3.innerHTML = '<input type="text" name="supplier" class="form-control" placeholder="اسم المورد"/>  '; 
- cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="0"/> '; 
+ cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="00"/> '; 
  cell5.innerHTML = '<input type="number" name="price" class="form-control" placeholder="0000"/> '; 
-  cell6.innerHTML = '<input type="number" name="totals" class="form-control" placeholder="0000000"/>  '; 
+  cell6.innerHTML = '<input disabled type="number" name="totals" class="form-control" placeholder="0000000"/>  '; 
   cell7.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
 }
  
  
- //جدوال القوة العامه للمشروع    
+ //جدوال القوى العاملة للمشروع    
+ function calculateTotals()
+ {
+  var price=document.getElementById("monys").value;
+  var quality=document.getElementById("Nemployee").value;
+
+ }
+
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function vvvv()
+	} function staffs()
 	{ 
-	var table = document.getElementById("nnnnn");
+  var table = document.getElementById("staffs");
+  
+  
+  var table1 = document.getElementById("staffs").getElementsByTagName("tbody")[0];
+  var rows=table1.getElementsByTagName("tr");
+  var i;
+  var ii;
+  var monysNemployee=0;
+  var monys,Nemployee;
+  var total=0;
+  var totalBox=document.getElementById("totalsyears");
+
+  for (i=0;i<rows.length;i++)
+  {
+
+    for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
+    {
+      Nemployee=(rows[i].getElementsByTagName("td")[1].getElementsByTagName("input")[0].value);
+      monys=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+
+      monysNemployee=Nemployee*monys;
+    console.log(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+    rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value=monysNemployee;
+    rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value=monysNemployee*12;
+
+    
+  }
+  total=total+Number(rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value);
+    totalBox.value=total;
+}
+ 
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+6; 
@@ -480,19 +552,53 @@ row.id=id;
  cell2.innerHTML = '<input type="text" name="occupation" class="form-control" placeholder="اسم الوظيفة "/>  '; 
  cell3.innerHTML = '<input type="number" name="mony" class="form-control" placeholder="0000"/> '; 
  cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="0"/>  ';
- cell5.innerHTML = '<input type="number" name="totalMony" class="form-control" placeholder="0000"/>  '; 
- cell6.innerHTML = '<input type="number" name="totalMony" class="form-control" placeholder="0000000"/>  '; 
+ cell5.innerHTML = '<input disabled type="number" name="totalMony" class="form-control" placeholder="0000"/>  '; 
+ cell6.innerHTML = '<input disabled type="number" name="totalMony" class="form-control" placeholder="0000000"/>  '; 
  cell7.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
  
-  //جدوال الانشات والمباني    
+  //جدوال الانشات والمباني 
+  function calculateTotals()
+ {
+  var amount=document.getElementById("Mater").value;
+  var prices=document.getElementById("Area").value;
+
+ }
+  
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function mmmmm()
+	} function Buildings()
 	{ 
-	var table = document.getElementById("nnnnnn");
+  var table = document.getElementById("Buildings");
+  
+  
+  var table1 = document.getElementById("Buildings").getElementsByTagName("tbody")[0];
+  var rows=table1.getElementsByTagName("tr");
+  var i;
+  var ii;
+  var MaterArea=0;
+  var mater,Area;
+  var total=0;
+  var totalBox=document.getElementById("Totalsa");
+
+  for (i=0;i<rows.length;i++)
+  {
+
+    for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
+    {
+      mater=(rows[i].getElementsByTagName("td")[1].getElementsByTagName("input")[0].value);
+      Area=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+
+      MaterArea=mater*Area;
+    console.log(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+    rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value=MaterArea;
+    
+  }
+  total=total+Number(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+    totalBox.value=total;
+}
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+7; 
@@ -505,23 +611,24 @@ row.id=id;
  var cell5 = row.insertCell(4);
  var cell6 = row.insertCell(5);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = '<input type="text" name="name" class="form-control" placeholder="نوع البناء  "/>'; 
- cell3.innerHTML = '<input type="number" name="mater" class="form-control" placeholder="000"/>'; 
- cell4.innerHTML = '<input type="text" name="year" class="form-control" placeholder="000"/>'; 
- cell5.innerHTML = '<input type="number" name="totals" class="form-control" placeholder="000"/> ';
+ cell2.innerHTML = '<input type="text" name="Builid" class="form-control" placeholder="نوع البناء  "/>'; 
+ cell3.innerHTML = '<input type="number" name="Mater" class="form-control" placeholder="000"/>'; 
+ cell4.innerHTML = '<input type="number" name="Area" class="form-control" placeholder="000"/>'; 
+ cell5.innerHTML = '<input disabled type="number" name="Totalsa" class="form-control" placeholder="000"/> ';
  cell6.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
  
  
   //جدوال الايجارات
- 
+  
+
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
 	} function rentals()
 	{ 
-	var table = document.getElementById("rentalsID");
+  var table = document.getElementById("rentals");
 	// GET TOTAL NUMBER OF ROWS 
 var y =table.rows.length; 
 var id = "tbl"+y+8;
@@ -536,7 +643,7 @@ row.id=id;
  cell1.outerHTML = `<th> ${y}</th>`; 
  cell2.innerHTML = '<input type="text" name="varieties" class="form-control" placeholder=" الاصناف والمعدات"/> '; 
  cell3.innerHTML = '<input type="number" name="rentAnnually" class="form-control" placeholder="000"/> '; 
-cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')"  ><i class="bx bx-trash me-1"></i> </input> '; 
+ cell4.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
  
@@ -546,9 +653,9 @@ cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function nnnnnnn()
+	} function Taxes()
 	{ 
-	var table = document.getElementById("mmmmmm");
+	var table = document.getElementById("Taxes");
 	// GET TOTAL NUMBER OF ROWS 
 var y =table.rows.length; 
 var id = "tbl"+y+9;
@@ -563,18 +670,18 @@ row.id=id;
  cell1.outerHTML = `<th> ${y}</th>`; 
  cell2.innerHTML = '<input type="text" name="fees" class="form-control" placeholder="الرسوم الحكومية "/>  '; 
  cell3.innerHTML = '<input type="number" name="AnnualFee" class="form-control" placeholder="0000"/> '; 
-cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')"  ><i class="bx bx-trash me-1"></i> </input> '; 
+ cell4.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
  
- //جدوال  الرسوم الحكومية والضرائب 
+ //جدول  مصاريف التاسيس  
  
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function nnnnnnnn()
+	} function FoundationExpenses()
 	{ 
-	var table = document.getElementById("mmmmmmm");
+	var table = document.getElementById("FoundationExpenses");
 	// GET TOTAL NUMBER OF ROWS 
 var y =table.rows.length; 
 var id = "tbl"+y+10;
@@ -589,18 +696,56 @@ row.id=id;
  cell1.outerHTML = `<th> ${y}</th>`; 
  cell2.innerHTML = '<input type="text" name="Foundation" class="form-control" placeholder="مصاريف التأسيس "/>  '; 
  cell3.innerHTML = '<input type="number" name="price" class="form-control" placeholder="0000"/> '; 
-cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="add-row" onclick="deleteRow(\''+id+'\')"  ><i class="bx bx-trash me-1"></i> </input> '; 
+ cell4.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
  
  
    //جدوال  المواد الخام 
+   function calculateTotals()
+ {
+  var Uint=document.getElementById("Uint").value;
+  var qualitReqiredMonthly=document.getElementById("qualitReqiredMonthly").value;
+
+ }
+
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function mmmmmmmm()
+	} function Materials()
 	{ 
-	var table = document.getElementById("nnnnnnnnnn");
+  var table = document.getElementById("Materials");
+  
+  
+  
+  var table1 = document.getElementById("Materials").getElementsByTagName("tbody")[0];
+  var rows=table1.getElementsByTagName("tr");
+  var i;
+  var ii;
+  var UintqualitReqiredMonthly=0;
+  var uint,qualitReqiredMonthly;
+  var total=0;
+  var totalBox=document.getElementById("totalsss");
+
+  for (i=0;i<rows.length;i++)
+  {
+
+    for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
+    {
+      qualitReqiredMonthly=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+      uint=(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+
+      UintqualitReqiredMonthly=qualitReqiredMonthly*uint;
+    console.log(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+    rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value=UintqualitReqiredMonthly;
+    rows[i].getElementsByTagName("td")[5].getElementsByTagName("input")[0].value=UintqualitReqiredMonthly*12;
+
+    
+  }
+  total=total+Number(rows[i].getElementsByTagName("td")[5].getElementsByTagName("input")[0].value);
+    totalBox.value=total;
+}
+ 
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+11; 
@@ -614,23 +759,57 @@ row.id=id;
  var cell6 = row.insertCell(5);
  var cell7 = row.insertCell(6);
  var cell8 = row.insertCell(7);
+
  cell1.outerHTML = `<th> ${x}</th>`; 
  cell2.innerHTML = '<input type="text" name="Article" class="form-control" placeholder="نوع الماده"/> '; 
  cell3.innerHTML = '<input type="text" name="liter" class="form-control" placeholder="لتر"/> '; 
- cell4.innerHTML = '<input type="number" name="price" class="form-control" placeholder="00"/> '; 
- cell5.innerHTML = '<input type="number" name="sum" class="form-control" placeholder="00"/> ';
- cell6.innerHTML = '<input type="number" name="total" class="form-control" placeholder="000"/> ';
- cell7.innerHTML = '<input type="number" name="total" class="form-control" placeholder="000"/> ';
+ cell4.innerHTML = '<input type="number" name="Uint" class="form-control" placeholder="00"/> '; 
+ cell5.innerHTML = '<input type="number" name="qualitReqiredMonthly" class="form-control" placeholder="000"/> ';
+ cell6.innerHTML = '<input disabled type="number" name="totalss" class="form-control" placeholder="00000"/> ';
+ cell7.innerHTML = '<input disabled type="number" name="totalsss" class="form-control" placeholder="000000"/> ';
  cell8.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
- 
+ // المنافع العامة
+ function calculateTotals()
+ {
+  var amount=document.getElementById("Monthlycost").value;
+
+ }
+
 
  function deleteRow(id) 
 {
 	document.getElementById(id).remove() 
-	} function klklk()
+	} function benefits()
 	{ 
-	var table = document.getElementById("kkkkkk");
+  var table = document.getElementById("benefits");
+  
+  
+  var table1 = document.getElementById("benefits").getElementsByTagName("tbody")[0];
+  var rows=table1.getElementsByTagName("tr");
+  var i;
+  var ii;
+  var Monthlycost=0;
+  var total=0;
+  var totalBox=document.getElementById("yearcost");
+
+  for (i=0;i<rows.length;i++)
+  {
+
+    for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
+    {
+      Monthlycost=(rows[i].getElementsByTagName("td")[1].getElementsByTagName("input")[0].value);
+
+      Monthlycost=Monthlycost;
+    console.log(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+    rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value=Monthlycost;
+    rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value=Monthlycost*12;
+
+    
+  }
+  total=total+Number(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+    totalBox.value=total;
+}
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+12; 
@@ -642,9 +821,9 @@ row.id=id;
  var cell4 = row.insertCell(3);
   var cell5 = row.insertCell(4);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = '<input type="text" name="name" class="form-control" placeholder="الماده   "/>'; 
- cell3.innerHTML = '<input type="number" name="mater" class="form-control" placeholder="000"/>'; 
- cell4.innerHTML = '<input type="text" name="year" class="form-control" placeholder="000"/>'; 
+ cell2.innerHTML = '<input type="text" name="item" class="form-control" placeholder="الماده   "/>'; 
+ cell3.innerHTML = '<input type="number" name="Monthlycost" class="form-control" placeholder="00000"/>'; 
+ cell4.innerHTML = '<input disabled type="number" name="yearcost" class="form-control" placeholder="0000000"/>'; 
  cell5.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
  }
  
