@@ -1523,10 +1523,10 @@
 							<input type="text" name="supplier" class="form-control" placeholder="اسم المورد"/> 
 						</td> 
 						<td class="col-sm-2"> 
-							<input  type="number" name="amount" class="form-control" placeholder="00"/>
+							<input  type="number" name="amount" class="form-control" placeholder="00" onkeyup="calculateTotal()"/>
 						</td> 
 						<td class="col-sm-2"> 
-							<input type="number" name="prices" class="form-control" placeholder="0000"/>
+							<input type="number" name="prices" class="form-control" placeholder="0000" onkeyup="calculateTotal()"/>
 						</td>
 						<td class="col-sm-2"> 
 							<input disabled type="text" name="totals" class="form-control" placeholder="0000000"/> 
@@ -1540,9 +1540,8 @@
           </tbody> 
           <thead class="table-info">
             <tr>
-              <th scope="col"> </th> 
-              <th scope="col"> </th> 
-              <th scope="col"> الاجمــــــــــــــالي</th>
+              <th scope="col" > </th> 
+              <th scope="col" colspan="2" class="text-center"> الاجمــــــــــــــالي</th>
               <th scope="col"> <input id="amount" disabled type="number" name="amount" class="form-control"/></th>
               <th scope="col"> <input id="prices" disabled type="number" name="prices" class="form-control"/></th>
               <th scope="col"> <input id="totalas" disabled type="number" name="totalas" class="form-control"/></th>

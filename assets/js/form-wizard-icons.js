@@ -430,19 +430,8 @@ cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="
  }
  
  //اول جدوال في الدراسة الفنية الاثاث والمعدات
-  function calculateTotals()
+  function calculateTotal()
  {
-  var amount=document.getElementById("amount").value;
-  var prices=document.getElementById("prices").value;
-
- }
-
- function deleteRow(id) 
-{
-	document.getElementById(id).remove() 
-	} function Furniture()
-	{ 
-  var table = document.getElementById("Furniture");
   
   
   var table1 = document.getElementById("Furniture").getElementsByTagName("tbody")[0];
@@ -452,6 +441,8 @@ cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="
   var PricesAmount=0;
   var prices,Amount;
   var total=0;
+  var TotalPrices=0;
+  var Totalamount=0;
   var totalBox=document.getElementById("totalas");
 
   for (i=0;i<rows.length;i++)
@@ -459,17 +450,33 @@ cell4.innerHTML = '  <input type="button" class="btn btn-block btn-default" id="
 
     for(ii=0;ii<=rows[i].getElementsByTagName("td").length;ii++)
     {
-      Amount=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
+    Amount=(rows[i].getElementsByTagName("td")[2].getElementsByTagName("input")[0].value);
     prices=(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
 
     PricesAmount=Amount*prices;
-    console.log(rows[i].getElementsByTagName("td")[3].getElementsByTagName("input")[0].value);
+
     rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value=PricesAmount;
     
   }
+  TotalPrices=TotalPrices+Number(prices);
+  Totalamount=Totalamount+Number(Amount);
+  document.getElementById("prices").value=TotalPrices;
+  document.getElementById("amount").value=Totalamount;
   total=total+Number(rows[i].getElementsByTagName("td")[4].getElementsByTagName("input")[0].value);
     totalBox.value=total;
 }
+
+ }
+
+ function deleteRow(id) 
+{
+	document.getElementById(id).remove() 
+	} 
+function Furniture()
+	{ 
+    var table = document.getElementById("Furniture");
+    calculateTotal();
+
 	// GET TOTAL NUMBER OF ROWS 
 var x =table.rows.length; 
 var id = "tbl"+x+5; 
@@ -483,10 +490,10 @@ row.id=id;
  var cell6 = row.insertCell(5);
  var cell7 = row.insertCell(6);
  cell1.outerHTML = `<th> ${x}</th>`; 
- cell2.innerHTML = '<input type="text" name="item" class="form-control" placeholder=" البنـــــــد"/>  '; 
+ cell2.innerHTML = '<input type="text" name="item" class="form-control"  placeholder=" البنـــــــد"/>  '; 
  cell3.innerHTML = '<input type="text" name="supplier" class="form-control" placeholder="اسم المورد"/>  '; 
- cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="00"/> '; 
- cell5.innerHTML = '<input type="number" name="price" class="form-control" placeholder="0000"/> '; 
+ cell4.innerHTML = '<input type="number" name="total" class="form-control" placeholder="00" onkeyup=\'calculateTotal();\'/> '; 
+ cell5.innerHTML = '<input type="number" name="price" class="form-control" placeholder="0000"/ onkeyup=\'calculateTotal();\'> '; 
   cell6.innerHTML = '<input disabled type="number" name="totals" class="form-control" placeholder="0000000"/>  '; 
   cell7.innerHTML = '  <button type="button" class="btn btn-danger" class=btn btn-primary" id="add-row" onclick="deleteRow(\''+id+'\')"> حذف</button> '; 
 }
